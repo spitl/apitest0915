@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "c0fc352e-84be-48fe-ba07-6a930d7ebb5b",
+		"name": "登陆模块",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "登陆",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"mobile\":\"13800000002\", \r\n\"password\":\"123456\"}"
+				},
+				"url": {
+					"raw": "http://182.92.81.159/api/sys/login",
+					"protocol": "http",
+					"host": [
+						"182",
+						"92",
+						"81",
+						"159"
+					],
+					"path": [
+						"api",
+						"sys",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登陆 手机号为空",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"mobile\":\"\", \r\n\"password\":\"123456\"}"
+				},
+				"url": {
+					"raw": "http://182.92.81.159/api/sys/login",
+					"protocol": "http",
+					"host": [
+						"182",
+						"92",
+						"81",
+						"159"
+					],
+					"path": [
+						"api",
+						"sys",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登陆 密码错误",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"mobile\":\"13800000002\", \r\n\"password\":\"error\"}"
+				},
+				"url": {
+					"raw": "http://182.92.81.159/api/sys/login",
+					"protocol": "http",
+					"host": [
+						"182",
+						"92",
+						"81",
+						"159"
+					],
+					"path": [
+						"api",
+						"sys",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登陆 手机号错误",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"mobile\":\"13800000003\", \r\n\"password\":\"123456\"}"
+				},
+				"url": {
+					"raw": "http://182.92.81.159/api/sys/login",
+					"protocol": "http",
+					"host": [
+						"182",
+						"92",
+						"81",
+						"159"
+					],
+					"path": [
+						"api",
+						"sys",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登陆 密码为空",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"mobile\":\"13800000002\", \r\n\"password\":\"\"}"
+				},
+				"url": {
+					"raw": "http://182.92.81.159/api/sys/login",
+					"protocol": "http",
+					"host": [
+						"182",
+						"92",
+						"81",
+						"159"
+					],
+					"path": [
+						"api",
+						"sys",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登陆 不输入",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"mobile\":\"\", \r\n\"password\":\"\"}"
+				},
+				"url": {
+					"raw": "http://182.92.81.159/api/sys/login",
+					"protocol": "http",
+					"host": [
+						"182",
+						"92",
+						"81",
+						"159"
+					],
+					"path": [
+						"api",
+						"sys",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
